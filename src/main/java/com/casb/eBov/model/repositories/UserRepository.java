@@ -7,4 +7,6 @@ import com.casb.eBov.model.domain.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	boolean existsById(Integer id);
+	boolean existsByLogin(String login);
 }
